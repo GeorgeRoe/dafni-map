@@ -26,26 +26,23 @@ useSeoMeta({
 
 <template>
   <UApp>
-    <UHeader>
+    <UHeader
+      :ui="{
+        container: 'max-w-none px-4 sm:px-4 lg:px-4 w-full'
+      }"
+    >
       <template #left>
         <NuxtLink to="/">
-          <AppLogo class="w-auto h-6 shrink-0" />
+          <UColorModeImage
+            light="/dafni-logo-grey.png"
+            dark="/dafni-logo-white.png"
+            :width="122"
+          />
         </NuxtLink>
-
-        <TemplateMenu />
       </template>
 
       <template #right>
         <UColorModeButton />
-
-        <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
-          target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
-          color="neutral"
-          variant="ghost"
-        />
       </template>
     </UHeader>
 
