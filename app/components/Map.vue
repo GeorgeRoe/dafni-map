@@ -53,7 +53,10 @@ onMounted(() => {
                type: 'Point',
                coordinates: [-2.9395176240355627 + i * 0.005, 53.39556235424056 + i * 0.005]
              },
-             properties: {}
+             properties: {
+                id: `point-${i}`,
+                name: `Point ${i}`
+             }
           })) as any,
         ]
       },
@@ -69,6 +72,16 @@ onMounted(() => {
         'icon-size': 0.175
       }
     })
+  })
+
+  map.value.on('click', 'points', (e) => {
+    if (!e.features || e.features.length === 0) return
+
+    const clickedFeature = e.features[0]
+
+    if (clickedFeature === undefined) return
+
+    console.log('Clicked feature:', clickedFeature)
   })
 })
 
