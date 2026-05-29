@@ -30,8 +30,8 @@ onMounted(() => {
         }
       ],
     },
-    center: [0, 0],
-    zoom: 2,
+    center: [-3, 54],
+    zoom: 5,
   })
 
   map.value.addControl(new maplibregl.NavigationControl(), 'top-right')
