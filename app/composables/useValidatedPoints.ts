@@ -1,4 +1,4 @@
-import type { Point } from "~/types/point"
+import type { Point } from "~/types/partnerPoint"
 import typia from 'typia'
 
 export function useValidatedPoints(points: MaybeRefOrGetter<unknown>) {

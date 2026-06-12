@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import pointData from '~/assets/data/points.json'
+import partnerPointData from '~/assets/data/partnerPoints.json'
 import { useValidatedPoints } from '~/composables/useValidatedPoints'
 import type { MapGeoJSONFeature } from 'maplibre-gl'
 
-const points = useValidatedPoints(pointData)
+const partnerPoints = useValidatedPoints(partnerPointData)
 
 function onClick(feature: MapGeoJSONFeature) {
   console.log('Feature Clicked:', feature)
@@ -14,7 +14,7 @@ function onClick(feature: MapGeoJSONFeature) {
   <div class="h-[calc(100vh-var(--ui-header-height))]">
     <Map
       @click="onClick"
-      :points="points"
+      :partner-points="partnerPoints"
     />
   </div>
 </template>

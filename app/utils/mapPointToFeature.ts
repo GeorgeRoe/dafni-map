@@ -1,7 +1,8 @@
-import type { Feature, Point as GeoJsonPoint } from 'geojson'
-import { StakeholderType, type Point } from '~/types/point'
+import type { Feature, Point } from 'geojson'
+import type { PartnerPoint } from '~/types/partnerPoint'
+import type { Partner } from '~/types/partner'
 
-export function mapPointToFeature(point: Point): Feature<GeoJsonPoint, Pick<Point, 'name' | 'stakeholderType'>> {
+export function mapPartnerPointToFeature(point: PartnerPoint): Feature<Point, Partner> {
   return {
     type: 'Feature',
     geometry: {

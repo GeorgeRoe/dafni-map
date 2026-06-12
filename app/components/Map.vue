@@ -1,20 +1,23 @@
 <script setup lang="ts">
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
-import { StakeholderType, type Point } from '~/types/point'
-import { mapPointToFeature } from '~/utils/mapPointToFeature'
+import type { PartnerPoint } from '~/types/partnerPoint'
+import { mapPartnerPointToFeature } from '~/utils/mapPointToFeature'
+import { StakeholderType } from '~/types/stakeholderType'
+import type { Partner } from '~/types/partner'
+import { isPartner } from '~/utils/isPartner'
 
 const props = withDefaults(defineProps<{
-  points?: Point[]
+  partnerPoints?: PartnerPoint[]
 }>(), {
-  points: () => []
+  partnerPoints: () => []
 })
 
 const emit = defineEmits<{
-  click: [maplibregl.MapGeoJSONFeature]
+  click: [Partner]
 }>()
 
-const mablibreGlFeatures = computed(() => props.points.map(mapPointToFeature))
+const mablibreGlFeatures = computed(() => props.partnerPoints.map(mapPartnerPointToFeature))
 
 const mapElement = useTemplateRef<HTMLElement>('map')
 const map = shallowRef<maplibregl.Map | null>(null)
@@ -76,7 +79,7 @@ onMounted(() => {
     })
 
     map.value.addLayer({
-      id: 'clusters',
+      id: 'background',
       type: 'circle',
       source: 'point',
       paint: {
@@ -120,14 +123,16 @@ onMounted(() => {
     })
   })
 
-  map.value.on('click', 'points', (e) => {
+  map.value.on('click', 'background', (e) => {
     if (!e.features || e.features.length === 0) return
 
     const clickedFeature = e.features[0]
 
     if (clickedFeature === undefined) return
 
-    emit('click', clickedFeature)
+    if (isPartner(clickedFeature.properties)) {
+      emit('click', clickedFeature.properties)
+    }
   })
 })
 
