@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
+import type { Point } from '~/types/point'
+import { mapPointToFeature } from '~/utils/mapPointToFeature'
+import typia from 'typia'
+
+const props = withDefaults(defineProps<{
+  points?: Point[]
+}>(), {
+  points: () => []
+})
+
+const mablibreGlFeatures = computed(() => props.points.map(mapPointToFeature))
 
 const mapElement = useTemplateRef<HTMLElement>('map')
 const map = shallowRef<maplibregl.Map | null>(null)
@@ -46,19 +57,7 @@ onMounted(() => {
       type: 'geojson',
       data: {
         type: 'FeatureCollection',
-        features: [
-          ...[0, 1,2,3].map(i => ({
-             type: 'Feature',
-             geometry: {
-               type: 'Point',
-               coordinates: [-2.9395176240355627 + i * 0.005, 53.39556235424056 + i * 0.005]
-             },
-             properties: {
-                id: `point-${i}`,
-                name: `Point ${i}`
-             }
-          })) as any,
-        ]
+        features: mablibreGlFeatures.value,
       },
       cluster: true,
     })
@@ -83,6 +82,19 @@ onMounted(() => {
 
     console.log('Clicked feature:', clickedFeature)
   })
+})
+
+watch(mablibreGlFeatures, (newFeatures) => {
+  if (map.value === null) return
+
+  const source = map.value.getSource('point')
+
+  if (source !== undefined && isMaplibreglGeoJSONSource(source)) {
+    (source as maplibregl.GeoJSONSource).setData({
+      type: 'FeatureCollection',
+      features: newFeatures,
+    })
+  }
 })
 
 onBeforeUnmount(() => {

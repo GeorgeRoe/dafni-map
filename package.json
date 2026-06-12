@@ -16,11 +16,15 @@
     "@nuxt/ui": "^4.7.1",
     "maplibre-gl": "^5.24.0",
     "nuxt": "^4.4.6",
-    "tailwindcss": "^4.3.0"
+    "tailwindcss": "^4.3.0",
+    "typia": "^12.1.1"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.15.2",
+    "@types/geojson": "^7946.0.16",
+    "@typia/unplugin": "^12.1.1",
     "eslint": "^10.4.0",
+    "ts-patch": "^4.0.1",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.0"
   },

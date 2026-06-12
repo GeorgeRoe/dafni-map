@@ -1,3 +1,5 @@
+import UnpluginTypia from '@typia/unplugin/vite'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
@@ -24,5 +26,11 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  vite: {
+    plugins: [
+      UnpluginTypia()
+    ]
   }
 })
