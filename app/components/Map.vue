@@ -66,9 +66,38 @@ onMounted(() => {
     })
 
     map.value.addLayer({
+      id: 'clusters',
+      type: 'circle',
+      source: 'point',
+      filter: ['has', 'cluster'], // Only applies to grouped features
+      paint: {
+        'circle-color': '#555555',
+        'circle-radius': 20,
+        'circle-stroke-width': 2,
+        'circle-stroke-color': '#ffffff'
+      }
+    })
+
+    map.value.addLayer({
+      id: 'cluster-count',
+      type: 'symbol',
+      source: 'point',
+      filter: ['has', 'point_count'],
+      layout: {
+        'text-field': '{point_count_abbreviated}',
+        'text-font': ['Open Sans Regular'],
+        'text-size': 20
+      },
+      paint: {
+        'text-color': '#ffffff' 
+      }
+    })
+
+    map.value.addLayer({
       id: 'points',
       type: 'symbol',
       source: 'point',
+      filter: ['!', ['has', 'cluster']], // Only applies to individual points
       layout: {
         'icon-image': 'custom-marker',
         'icon-size': 0.175
