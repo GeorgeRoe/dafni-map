@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
-import type { Point } from '~/types/point'
+import { StakeholderType, type Point } from '~/types/point'
 import { mapPointToFeature } from '~/utils/mapPointToFeature'
 
 const props = withDefaults(defineProps<{
@@ -53,8 +53,18 @@ onMounted(() => {
   map.value.on('load', async () => {
     if (map.value === null) return
 
-    const image = await map.value.loadImage('/rustacean.png')
-    map.value.addImage('custom-marker', image.data)
+    await Promise.all(
+      Object.values(StakeholderType).map(async (stakeholderType) => {
+        if (!map.value) return
+        
+        try {
+          const image = await map.value.loadImage(`/icons/${stakeholderType}.png`)
+          map.value.addImage(stakeholderType, image.data)
+        } catch (error) {
+          console.error(`Failed to load icon for: ${stakeholderType}`, error)
+        }
+      })
+    )
 
     map.value.addSource('point', {
       type: 'geojson',
@@ -69,7 +79,6 @@ onMounted(() => {
       id: 'clusters',
       type: 'circle',
       source: 'point',
-      filter: ['has', 'cluster'], // Only applies to grouped features
       paint: {
         'circle-color': '#555555',
         'circle-radius': 20,
@@ -93,15 +102,21 @@ onMounted(() => {
       }
     })
 
-    map.value.addLayer({
-      id: 'points',
-      type: 'symbol',
-      source: 'point',
-      filter: ['!', ['has', 'cluster']], // Only applies to individual points
-      layout: {
-        'icon-image': 'custom-marker',
-        'icon-size': 0.175
-      }
+    Object.values(StakeholderType).forEach(stakeholderType => {
+      map.value?.addLayer({
+        id: `points-${stakeholderType}`,
+        type: 'symbol',
+        source: 'point',
+        filter: [
+          'all',
+          ['!', ['has', 'cluster']], 
+          ['==', ['get', 'stakeholderType'], stakeholderType]
+        ],
+        layout: {
+          'icon-image': stakeholderType,
+          'icon-size': 0.1
+        }
+      })
     })
   })
 

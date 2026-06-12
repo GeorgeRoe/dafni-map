@@ -1,7 +1,7 @@
 import type { Feature, Point as GeoJsonPoint } from 'geojson'
-import type { Point } from '~/types/point'
+import { StakeholderType, type Point } from '~/types/point'
 
-export function mapPointToFeature(point: Point): Feature<GeoJsonPoint, Pick<Point, 'name'>> {
+export function mapPointToFeature(point: Point): Feature<GeoJsonPoint, Pick<Point, 'name' | 'stakeholderType'>> {
   return {
     type: 'Feature',
     geometry: {
@@ -9,7 +9,8 @@ export function mapPointToFeature(point: Point): Feature<GeoJsonPoint, Pick<Poin
       coordinates: [point.longitude, point.latitude]
     },
     properties: {
-      name: point.name
+      name: point.name,
+      stakeholderType: point.stakeholderType
     }
   }
 }
