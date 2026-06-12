@@ -1,9 +1,17 @@
-import type { Point } from "~/types/partnerPoint"
+import type { PartnerPoint } from "~/types/partnerPoint"
 import typia from 'typia'
 
+/**
+ * Validates that the provided data is an array of Point objects.
+ *
+ * TypeScript only checks types while developing.
+ * This validation runs at runtime to make sure the actual data
+ * matches the PartnerPoint[] structure we expect.
+ */
+
 export function useValidatedPoints(points: MaybeRefOrGetter<unknown>) {
-  return computed<Point[]>(() => {
-    const validation = typia.validate<Point[]>(toValue(points))
+  return computed<PartnerPoint[]>(() => {
+    const validation = typia.validate<PartnerPoint[]>(toValue(points))
 
     if (validation.success) {
       return validation.data
