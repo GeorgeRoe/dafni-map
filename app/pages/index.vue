@@ -2,11 +2,12 @@
 import partnerPointData from '~/assets/data/partnerPoints.json'
 import { useValidatedPoints } from '~/composables/useValidatedPoints'
 import type { MapGeoJSONFeature } from 'maplibre-gl'
+import type { Partner } from '~/types/partner'
 
 const partnerPoints = useValidatedPoints(partnerPointData)
 
-function onClick(feature: MapGeoJSONFeature) {
-  console.log('Feature Clicked:', feature)
+function onClick(partner: Partner) {
+  console.log('Feature Clicked:', partner)
 }
 </script>
 
