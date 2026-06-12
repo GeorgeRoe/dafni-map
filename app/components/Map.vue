@@ -3,13 +3,16 @@ import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import type { Point } from '~/types/point'
 import { mapPointToFeature } from '~/utils/mapPointToFeature'
-import typia from 'typia'
 
 const props = withDefaults(defineProps<{
   points?: Point[]
 }>(), {
   points: () => []
 })
+
+const emit = defineEmits<{
+  click: [maplibregl.MapGeoJSONFeature]
+}>()
 
 const mablibreGlFeatures = computed(() => props.points.map(mapPointToFeature))
 
@@ -80,7 +83,7 @@ onMounted(() => {
 
     if (clickedFeature === undefined) return
 
-    console.log('Clicked feature:', clickedFeature)
+    emit('click', clickedFeature)
   })
 })
 
