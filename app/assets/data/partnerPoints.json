@@ -1,26 +1,59 @@
 [
   {
-    "name": "Point A",
-    "stakeholderType": "Government",
-    "latitude": 40.7128,
-    "longitude": -74.0060
-  },
-  {
-    "name": "Point B",
+    "name": "Breckland Farmers Wildlife Network ",
     "stakeholderType": "Industry",
-    "latitude": 34.0522,
-    "longitude": -118.2437
+    "latitude": 52.50901,
+    "longitude": -2.08560
   },
   {
-    "name": "Point C",
-    "stakeholderType": "Academia",
-    "latitude": 51.5074,
-    "longitude": -0.1278
-  },
-  {
-    "name": "Point C",
+    "name": " Climate Change Committee ",
     "stakeholderType": "Government",
-    "latitude": 51.5074,
-    "longitude": -0.9
+    "latitude": 51.49895,
+    "longitude": -0.12691
+  },
+  {
+    "name": "Crown Point Estate ",
+    "stakeholderType": "Industry",
+    "latitude": 52.59651,
+    "longitude": 1.36786
+  },
+  {
+    "name": "JNCC",
+    "stakeholderType": "Government",
+    "latitude": 52.56720,
+    "longitude": -0.24077
+  },
+  {
+    "name": "Natural England",
+    "stakeholderType": "Government",
+    "latitude": 53.96054,
+    "longitude": -1.07485
+  },
+  {
+    "name": "Nature Scotland",
+    "stakeholderType": "Government",
+    "latitude": 57.46583,
+    "longitude": -4.27200
+  },
+  
+  {
+    "name": "Westcountry Rivers Trust",
+    "stakeholderType": "Industry",
+    "latitude": 50.54695,
+    "longitude": -4.31485
+  },
+  {
+    "name": "University of East Anglia",
+    "stakeholderType": "Academia",
+    "latitude": 52.62106,
+    "longitude": 1.23562
+  },
+  {
+    "name": "British Trust for Ornithology",
+    "stakeholderType": "Government",
+    "latitude": 52.40632,
+    "longitude": 0.75224
   }
+
 ]
+
