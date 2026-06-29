@@ -1,26 +1,44 @@
 [
   {
-    "name": "Point A",
-    "stakeholderType": "Government",
-    "latitude": 40.7128,
-    "longitude": -74.0060
-  },
-  {
-    "name": "Point B",
-    "stakeholderType": "Industry",
-    "latitude": 34.0522,
-    "longitude": -118.2437
-  },
-  {
-    "name": "Point C",
+    "name": "University of Plymouth",
     "stakeholderType": "Academia",
-    "latitude": 51.5074,
-    "longitude": -0.1278
+    "latitude": 50.374121,
+    "longitude": -4.138512 
   },
   {
-    "name": "Point C",
+    "name": "University of Leeds",
+    "stakeholderType": "Academia",
+    "latitude": 53.804330116,
+    "longitude": -1.550997796
+  },
+  {
+    "name": "UK Centre for Ecology & Hydrology",
     "stakeholderType": "Government",
-    "latitude": 51.5074,
-    "longitude": -0.9
+    "latitude": 54.00947,
+    "longitude": -2.78739
+  },
+  {
+    "name": "UKRI-STFC",
+    "stakeholderType": "Government",
+    "latitude": 51.58145,
+    "longitude": -1.31189
+  },
+  {
+    "name": "Royal Society for the Protection of Birds",
+    "stakeholderType": "Government",
+    "latitude": 52.11603,
+    "longitude": -0.26590
+  },
+  {
+    "name": "Quadram Institute Bioscience",
+    "stakeholderType": "Government",
+    "latitude": 52.61991,
+    "longitude": 1.21792
+  },
+  {
+    "name": "University of Newcastle upon Tyne",
+    "stakeholderType": "Academia",
+    "latitude": 52.625,
+    "longitude":  1.22498
   }
 ]
