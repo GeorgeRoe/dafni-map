@@ -3,13 +3,15 @@
     "name": "Breckland Farmers Wildlife Network ",
     "stakeholderType": "Industry",
     "latitude": 52.50901,
-    "longitude": -2.08560
+    "longitude": -2.08560,
+    "organisationDescription": "a farmer-led group collaborating to create a landscape-scale habitat network across the 400 square miles of the Norfolk & Suffolk Brecks. This is a very important area for food production but also home to a huge range of species, many of which are found nowhere else in the UK. "
   },
   {
-    "name": " Climate Change Committee ",
+    "name": "Climate Change Committee",
     "stakeholderType": "Government",
     "latitude": 51.49895,
-    "longitude": -0.12691
+    "longitude": -0.12691,
+    "organisationDescription":"The Climate Change Committee was established under the Climate Change Act 2008 and advises the UK and devolved governments on reducing emissions and adapting to the impacts of climate change."
   },
   {
     "name": "Crown Point Estate ",

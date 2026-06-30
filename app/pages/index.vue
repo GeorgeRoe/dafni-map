@@ -34,8 +34,8 @@ function onClick(partner: Partner) {
           icon="i-lucide-arrow-left"
           @click="slideoverOpen = false"
         />
-        <h1 :style="{ fontSize:'30px'}">{{ activePartner.name }}</h1>
-        <pre>{{ activePartner.stakeholderType  }}</pre>
+   
+        <pre>{{ activePartner  }}</pre>
       </template>
     </USlideover>
     <Map
