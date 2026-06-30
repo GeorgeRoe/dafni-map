@@ -36,6 +36,13 @@ function onClick(partner: Partner) {
         />
    
         <pre>{{ activePartner  }}</pre>
+        <NuxtLink to="/">
+          <UColorModeImage
+            light="/dafni-logo-grey.png"
+            dark="/dafni-logo-white.png"
+            :width="122"
+          />
+        </NuxtLink>
       </template>
     </USlideover>
     <Map

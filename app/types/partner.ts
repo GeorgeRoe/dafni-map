@@ -4,4 +4,6 @@ export interface Partner {
   name: string
   stakeholderType: StakeholderType 
   organisationDescription: string
+  imagefilepath: string
+  project: string
 }
