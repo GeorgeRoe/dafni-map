@@ -16,6 +16,7 @@ function onClick(partner: Partner) {
 
 <template>
   <div class="h-[calc(100vh-var(--ui-header-height))]">
+    
     <USlideover
       v-model:open="slideoverOpen"
       :modal="false"
@@ -33,7 +34,8 @@ function onClick(partner: Partner) {
           icon="i-lucide-arrow-left"
           @click="slideoverOpen = false"
         />
-        <pre>{{ activePartner }}</pre>
+        <h1 :style="{ fontSize:'30px'}">{{ activePartner.name }}</h1>
+        <pre>{{ activePartner.stakeholderType  }}</pre>
       </template>
     </USlideover>
     <Map
