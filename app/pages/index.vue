@@ -12,6 +12,7 @@ function onClick(partner: Partner) {
 }
 </script>
 
+
 <template>
   <div class="h-[calc(100vh-var(--ui-header-height))]">
     
@@ -33,7 +34,9 @@ function onClick(partner: Partner) {
           @click="slideoverOpen = false"
         />
    
-        <pre>{{ activePartner }}</pre>
+        <h1 class="toptext">{{ activePartner?.name }}</h1>
+        <h2 class="middletext">{{ activePartner?.project }}</h2>
+        <h3 class="bottomtext">{{ activePartner?.organisationDescription }}</h3>
         <img :src="'/partner_images/' + activePartner?.imageFilePath "/> 
       </template>
 
@@ -45,3 +48,32 @@ function onClick(partner: Partner) {
     />
   </div>
 </template>
+
+
+<style>
+.middletext {
+  position: relative;
+  top: -70px;
+  font-Size: 35px;
+  inset-inline-start: 5px;
+}
+.toptext {
+  position: relative;
+  top: 0px;
+  font-Size: 45px;
+  inset-inline-start: 5px;
+}
+.bottomtext {
+  position: relative;
+  top:  -20px;
+  font-Size: 25px;
+  inset-inline-start: 5px;
+}
+</style>
+
+
+
+
+
+
+
