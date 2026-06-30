@@ -13,7 +13,7 @@ export function mapPartnerPointToFeature(point: PartnerPoint): Feature<Point, Pa
       name: point.name,
       stakeholderType: point.stakeholderType,
       organisationDescription: point.organisationDescription,
-      imagefilepath: point.imagefilepath,
+      imageFilePath: point.imageFilePath,
       project: point.project
     }
   }

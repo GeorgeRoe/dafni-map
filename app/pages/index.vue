@@ -2,12 +2,10 @@
 import partnerPointData from '~/assets/data/partnerPoints.json'
 import { useValidatedPoints } from '~/composables/useValidatedPoints'
 import type { Partner } from '~/types/partner'
-
 const partnerPoints = useValidatedPoints(partnerPointData)
 
 const slideoverOpen = ref(false)
 const activePartner = ref<Partner | null>(null)
-
 function onClick(partner: Partner) {
   activePartner.value = partner
   slideoverOpen.value = true
@@ -35,15 +33,11 @@ function onClick(partner: Partner) {
           @click="slideoverOpen = false"
         />
    
-        <pre>{{ activePartner  }}</pre>
-        <NuxtLink to="/">
-          <UColorModeImage
-            light="/dafni-logo-grey.png"
-            dark="/dafni-logo-white.png"
-            :width="122"
-          />
-        </NuxtLink>
+        <pre>{{ activePartner }}</pre>
+        <img :src="'/partner_images/' + activePartner?.imageFilePath "/> 
       </template>
+
+   
     </USlideover>
     <Map
       @click="onClick"
