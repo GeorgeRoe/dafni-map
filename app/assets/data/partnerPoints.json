@@ -146,6 +146,41 @@
     "organisationDescription": "a world-leading university, advancing knowledge, providing creative solutions, and addressing global problems."
   },
   {
+    "name": "ARUP",
+    "stakeholderType": "Industry",
+    "latitude": 51.89755,
+    "longitude": -8.46357,
+    "project": "Urban Air",
+    "imagefilepath": "ARUP",
+    "organisationDescription": "Since our foundation in 1946, Arup has grown to be one of the largest consultancy firms in Ireland working across every aspect of today's built environment. We are an independent firm with over 700 designers, planners, engineers, project managers, consultants and technical specialists across our four offices."
+  },
+  {
+    "name": "KNMI",
+    "stakeholderType": "Industry",
+    "latitude": 52.08287,
+    "longitude": 4.32642,
+    "project": "Urban Air",
+    "imagefilepath": "KNMI",
+    "organisationDescription": "The climate is changing, the weather is becoming more erratic, the soil is shaking. Keeping the Netherlands safe and liveable is becoming increasingly challenging. The KNMI provides society with independent knowledge, advice and warnings about risks in the field of weather, climate and seismology, day and night."
+  },
+  { "name": "Leibniz University Hannover",
+    "stakeholderType": "Academia",
+    "latitude": 52.38254,
+    "longitude": 9.71785,
+    "project": "Urban Air",
+    "imagefilepath": "LUH",
+    "organisationDescription": "ounded in 1831 by the scholar Karl Karmarsch, the Higher Trade School of Hannover started out with just 64 students. Today Leibniz University Hannover is home to roughly 26,000 students in the natural sciences and engineering, the humanities and social sciences, and law and economics. The university is committed to continuously improving its teaching and research to ensure its ongoing appeal as a place to study, teach and conduct research."
+  },
+  {
+    "name": "BSC-CNS",
+    "stakeholderType": "Industry",
+    "latitude": 41.38976,
+    "longitude": 2.11554,
+    "project": "Urban Air",
+    "imagefilepath": "BSC-CNS",
+    "organisationDescription": "The Barcelona Supercomputing Center (BSC-CNS) is the national supercomputing center in Spain. We specialise in high-performance computing (HPC) and manage MareNostrum, one of the most powerful supercomputers in Europe."
+  },
+  {
     "name": "VITO",
     "stakeholderType": "Industry",
     "latitude": 51.21869,
