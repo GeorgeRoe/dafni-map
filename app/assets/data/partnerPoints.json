@@ -66,37 +66,43 @@
     "name": "University of Leeds",
     "stakeholderType": "Academia",
     "latitude": 53.804330116,
-    "longitude": -1.550997796
+    "longitude": -1.550997796,
+    "organisationDescription": "Established in 1904, the University of Leeds is one of the largest universities in the UK. We're part of the Russell Group of research-intensive universities and are renowned globally for the quality of our research"
   },
   {
     "name": "UK Centre for Ecology & Hydrology",
     "stakeholderType": "Government",
     "latitude": 54.00947,
-    "longitude": -2.78739
+    "longitude": -2.78739,
+    "organisationDescription": "For over 60 years, UKCEH and its predecessor institutes have been at the forefront of environmental monitoring and modelling. The long-term environmental data hosted by UKCEH inform policymaking, enable new discoveries, and drive research and innovation."
   },
   {
     "name": "UKRI-STFC",
     "stakeholderType": "Government",
     "latitude": 51.58145,
-    "longitude": -1.31189
+    "longitude": -1.31189,
+    "organisationDescription": "STFC's mission is to deliver world-leading national and international research and innovation capabilities and, through those, discover the secrets of the Universe."
   },
   {
     "name": "Royal Society for the Protection of Birds",
     "stakeholderType": "Government",
     "latitude": 52.11603,
-    "longitude": -0.26590
+    "longitude": -0.26590,
+    "organisationDescription": "carry out conservation on a large scale, protect and restore habitats, and save species from extinction."
   },
   {
     "name": "Quadram Institute Bioscience",
     "stakeholderType": "Government",
     "latitude": 52.61991,
-    "longitude": 1.21792
+    "longitude": 1.21792,
+    "organisationDescription": "research how food and microbes interact, to promote health and prevent disease."
   },
   {
     "name": "University of Newcastle upon Tyne",
     "stakeholderType": "Academia",
     "latitude": 52.625,
-    "longitude":  1.22498
+    "longitude":  1.22498,
+    "organisationDescription": "a world-leading university, advancing knowledge, providing creative solutions, and addressing global problems." 
   }
 ]
 
