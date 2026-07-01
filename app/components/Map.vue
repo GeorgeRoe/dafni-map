@@ -19,6 +19,7 @@ import { isPartner } from '~/utils/isPartner'
 
 const props = withDefaults(defineProps<{
   partnerPoints?: PartnerPoint[]
+  showAcademia: Boolean
 }>(), {
   partnerPoints: () => []
 })
@@ -198,11 +199,13 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="relative isolate z-0 h-full w-full">
-    <div
-      id="map"
-      ref="map"
-      class="absolute inset-0 h-full w-full"
-    />
+  <div class="h-full w-full">
+    <div class="relative isolate z-0 h-full w-full">
+      <div
+        id="map"
+        ref="map"
+        class="absolute inset-0 h-full w-full"
+      />
+    </div>
   </div>
 </template>

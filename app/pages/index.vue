@@ -4,18 +4,22 @@ import { useValidatedPoints } from '~/composables/useValidatedPoints'
 import type { Partner } from '~/types/partner'
 const partnerPoints = useValidatedPoints(partnerPointData)
 
+const showAcademia = ref(true)
+const showIndustry = ref(true)
+const showGovernment = ref(true)
+
 const slideoverOpen = ref(false)
 const activePartner = ref<Partner | null>(null)
 function onClick(partner: Partner) {
   activePartner.value = partner
   slideoverOpen.value = true
+  showAcademia.value = true
 }
 </script>
 
 
 <template>
-  <div class="h-[calc(100vh-var(--ui-header-height))]">
-    
+  <div class="h-[alc(100vh-var(--ui-header-height))] relative">
     <USlideover
       v-model:open="slideoverOpen"
       :modal="false"
@@ -36,20 +40,35 @@ function onClick(partner: Partner) {
           <h1 class="toptext">{{ activePartner?.name }}</h1>
         </template>
         
-      <template #body>
-        <h2 class="middletext"> Project: {{ activePartner?.project }}</h2>
-        <h3 class="bottomtext">Description: {{ activePartner?.organisationDescription }}</h3>
+      <template  #body>
+        <div class="container">
         <img class="imageadjust" :src="'/partner_images/' + activePartner?.imageFilePath "/> 
+        <a href="https://example.com" target="_blank"class="middletext"> Project: {{ activePartner?.project }}</a>
+        <h3 class="bottomtext">Description: {{ activePartner?.organisationDescription }}</h3>
+        
+        
+        </div>
       </template>
-
-   
     </USlideover>
+
     <Map
       @click="onClick"
       :partner-points="partnerPoints"
+      :show-academia="showAcademia"
+      class="absolute"
     />
+
+    <UCard class="absolute right-0 top-1/2">
+      <UCheckbox
+        color="neutral"
+        class="mb-4 w-fit m-2"
+        label="tickbox"
+        v-model="showAcademia"
+      />
+    </UCard>
   </div>
 </template>
+
 
 
 <style>
@@ -70,9 +89,10 @@ function onClick(partner: Partner) {
   font-Size: 25px;
   margin-left: 10px;
 }
-.imageadjust {
-  position: absolute;
-  text-align: center;
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column
 }
 </style>
 
