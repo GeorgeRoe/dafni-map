@@ -25,19 +25,21 @@ function onClick(partner: Partner) {
         content: 'top-[calc(1rem+var(--ui-header-height))]'
       }"
     >
-      <template #content>
+      <template #header>
         <UButton
           color="neutral"
           variant="subtle"
           class="mb-4 w-fit m-2"
           icon="i-lucide-arrow-left"
           @click="slideoverOpen = false"
-        />
-   
-        <h1 class="toptext">{{ activePartner?.name }}</h1>
-        <h2 class="middletext">{{ activePartner?.project }}</h2>
-        <h3 class="bottomtext">{{ activePartner?.organisationDescription }}</h3>
-        <img :src="'/partner_images/' + activePartner?.imageFilePath "/> 
+          />
+          <h1 class="toptext">{{ activePartner?.name }}</h1>
+        </template>
+        
+      <template #body>
+        <h2 class="middletext"> Project: {{ activePartner?.project }}</h2>
+        <h3 class="bottomtext">Description: {{ activePartner?.organisationDescription }}</h3>
+        <img class="imageadjust" :src="'/partner_images/' + activePartner?.imageFilePath "/> 
       </template>
 
    
@@ -53,21 +55,24 @@ function onClick(partner: Partner) {
 <style>
 .middletext {
   position: relative;
-  top: -70px;
+
   font-Size: 35px;
-  inset-inline-start: 5px;
+  margin-left: 10px;
 }
 .toptext {
   position: relative;
-  top: 0px;
   font-Size: 45px;
-  inset-inline-start: 5px;
+  margin-left: 10px;
 }
 .bottomtext {
   position: relative;
-  top:  -20px;
+
   font-Size: 25px;
-  inset-inline-start: 5px;
+  margin-left: 10px;
+}
+.imageadjust {
+  position: absolute;
+  text-align: center;
 }
 </style>
 
