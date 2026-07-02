@@ -1,15 +1,31 @@
 <script setup lang="ts">
 import projectData from '~/assets/data/project.json'
+import partnerPointData from '~/pages/index.vue'
+import { useValidatedPoints } from '~/composables/useValidatedPoints'
+
 const route = useRoute()
 const projectName = computed(() => route.params.project_name?.toString())
 
 const selectedProject = computed(() => {
   return projectData.find(project => project.name === projectName.value)
 })
+
+const partnerPoints = useValidatedPoints(partnerPointData)
+const filteredPartnerPoints = computed(() => {
+  return partnerPoints.value.filter(point => {
+    if (point.project === projectName.value) return true
+    return false
+  })
+})
 </script>
 
 
 <template>
+    <ul>
+      <li v-for="partner in filteredPartnerPoints">
+          {{ partner }}
+      </li>
+    </ul>
   <UContainer class="py-10">
     <UCard v-if="selectedProject" class="overflow-hidden">
       <div class="grid gap-4 md:grid-cols-2 items-center">
