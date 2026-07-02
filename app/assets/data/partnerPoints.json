@@ -153,5 +153,68 @@
     "project": "Urban Air",
     "imagefilepath": "VITO",
     "organisationDescription": "As a top European research centre, VITO and its 1,300 employees turn scientific insights into ground-breaking technological innovations, AI solutions and policy advice. We do so with a single objective: to help our world thrive for at least 1,000 more years."
+  },
+  {
+    "name": "Universite Toulouse",
+    "stakeholderType": "Academia",
+    "latitude": 43.59434,
+    "longitude":  1.45038,
+    "project": "Urban Air",
+    "imageFilePath": "UT.png",
+    "organisationDescription": "The University of Toulouse, formerly Université Toulouse III - Paul Sabatier, is one of France's leading universities, with nearly 37,000 students. The diversity of its laboratories and the quality of its teaching in the fields of science, health, sport, technology, and engineering ensure its strong national and international scientific reputation. The university has 74 research laboratories and federative research structures. It is also home to a remarkable scientific heritage, including the Pic du Midi Observatory, a candidate for UNESCO World Heritage status."
+  },
+  {
+    "name": "Future Needs",
+    "stakeholderType": "Industry",
+    "latitude": 35.14221,
+    "longitude":  33.34220,
+    "project": "Urban Air",
+    "imageFilePath": "FN.png",
+    "organisationDescription": "At Future Needs we look at things from the user perspective and we prioritize human factors in our studies and designs. We help our customers accomplish their development goals by addressing the future needs of their customers. We mainstream innovation by helping our clients turn research into products. We are a small team of senior consultants. In Future Needs we have grown professionally by working for respected employers all over Europe. Our next step to keep on growing was to become independent. And so we did.Our aim at Future Needs Management Consulting is to share our experience with small businesses and other types of innovative organisations to help them accomplish their R&D ambition."
+  },
+  {
+    "name": "SMHI",
+    "stakeholderType": "Academia",
+    "latitude": 58.58123,
+    "longitude":  16.14809,
+    "project": "Urban Air",
+    "imageFilePath": "SMHI.png",
+    "organisationDescription": "SMHI is a Swedish expert authority with a global perspective and a vital task of predicting changes in weather, water and climate. Based on scientific foundations and through knowledge, research, and services, we contribute to increasing the sustainability of society as a whole. Every day, around the clock, throughout the year."
+  },
+  {
+    "name": "R-Cities",
+    "stakeholderType": "Industry",
+    "latitude": 19.43351,
+    "longitude": -99.20954 ,
+    "project": "Urban Air",
+    "imageFilePath": "RC.png",
+    "organisationDescription": "For more than a decade, cities in our network have been shaping how urban resilience works in practice, developing new ways of governing, planning and investing, and demonstrating that resilience improves the everyday lives of people and communities. Chief Resilience Officers made this possible. Embedded inside local government, they connect departments, sustain momentum across political cycles and turn long-term priorities into action."
+  },
+  {
+    "name": "Meteo France",
+    "stakeholderType": "Industry",
+    "latitude": 43.57741,
+    "longitude":  1.37658,
+    "project": "Urban Air",
+    "imageFilePath": "MF.png",
+    "organisationDescription": "As a public expert in weather and climate, Météo-France is at your side to contribute to your daily safety and help you make the best decisions in a changing climate."
+  },
+  {
+    "name": "NMA",
+    "stakeholderType": "Government",
+    "latitude": 46.64870,
+    "longitude": 27.72604 ,
+    "project": "CrossEU",
+    "imageFilePath": "NMA.png",
+    "organisationDescription": "The National Meteorological Administration has as its main responsibility the protection of people's lives and material goods by transmitting weather forecasts and warnings, forecasts on the dispersion of atmospheric pollutants for situations of dangerous meteorological phenomena and accidental pollution, as well as agrometeorological forecasts to profile users. Specialized meteorological products are for a fee. They can contain diagnoses, current data from weather stations, forecasts, warnings and specialized weather bulletins, etc."
+  },
+  {
+    "name": "Universita Di Padova",
+    "stakeholderType": "Academia",
+    "latitude": 45.41086,
+    "longitude":  11.89345,
+    "project": "CrossEU",
+    "imageFilePath": "UDP.png",
+    "organisationDescription": "Silent witnesses of the long history of the University of Padua are also the palaces and monumental buildings that preserve centuries of knowledge and academic life. From Palazzo del Bo, the historic beating heart of the University, to the elegant frescoed rooms of Palazzo Cavalli, each building tells the story of the past of the University and of the city. Alongside these masterpieces of the past, today the University also looks to the future through urban regeneration and sustainable architecture projects . The twentieth-century buildings, created to meet the new needs of teaching and research, are flanked by new construction sites that redesign the university space with technologically advanced and environmentally friendly solutions. From the renovation of the Beato Pellegrino complex, intended for the humanities, to the most recent creations signed by internationally renowned architects, the University still proposes itself as a laboratory of ideas, experimentation and contemporary beauty."
   }
 ]
