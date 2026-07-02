@@ -53,7 +53,7 @@ function onClick(partner: Partner) {
       <template  #body>
         <div class="container">
           <img class="imageadjust" :src="'/partner_images/' + activePartner?.imageFilePath "/> 
-          <a href="https://example.com" target="_blank"class="middletext"> Project: {{ activePartner?.project }}</a>
+          <a href="/${activePartner.project" target="_blank"class="middletext"> Project: {{ activePartner?.project }}</a>
           <h3 class="bottomtext">Description: {{ activePartner?.organisationDescription }}</h3>
         </div>
       </template>
