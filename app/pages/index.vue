@@ -2,7 +2,22 @@
 import partnerPointData from '~/assets/data/partnerPoints.json'
 import { useValidatedPoints } from '~/composables/useValidatedPoints'
 import type { Partner } from '~/types/partner'
+import { StakeholderType } from '~/types/stakeholderType'
+
 const partnerPoints = useValidatedPoints(partnerPointData)
+
+const showAcademia = ref(true)
+const showIndustry = ref(true)
+const showGovernment = ref(true)
+
+const filteredPartnerPoints = computed(() => {
+  return partnerPoints.value.filter(point => {
+    if (point.stakeholderType === StakeholderType.Government && showGovernment.value) return true
+    if (point.stakeholderType === StakeholderType.Academia && showAcademia.value) return true
+    if (point.stakeholderType === StakeholderType.Industry && showIndustry.value) return true
+    return false
+  })
+})
 
 const slideoverOpen = ref(false)
 const activePartner = ref<Partner | null>(null)
@@ -15,7 +30,6 @@ function onClick(partner: Partner) {
 
 <template>
   <div class="h-[calc(100vh-var(--ui-header-height))]">
-    
     <USlideover
       v-model:open="slideoverOpen"
       :modal="false"
@@ -36,21 +50,42 @@ function onClick(partner: Partner) {
           <h1 class="toptext">{{ activePartner?.name }}</h1>
         </template>
         
-      <template #body>
-        <h2 class="middletext"> Project: {{ activePartner?.project }}</h2>
-        <h3 class="bottomtext">Description: {{ activePartner?.organisationDescription }}</h3>
-        <img class="imageadjust" :src="'/partner_images/' + activePartner?.imageFilePath "/> 
+      <template  #body>
+        <div class="container">
+          <img class="imageadjust" :src="'/partner_images/' + activePartner?.imageFilePath "/> 
+          <a href="https://example.com" target="_blank"class="middletext"> Project: {{ activePartner?.project }}</a>
+          <h3 class="bottomtext">Description: {{ activePartner?.organisationDescription }}</h3>
+        </div>
       </template>
-
-   
     </USlideover>
+
     <Map
       @click="onClick"
-      :partner-points="partnerPoints"
+      :partner-points="filteredPartnerPoints"
     />
+
+    <UCard class="absolute right-4 top-1/2 -translate-y-1/2">
+      <UCheckbox
+        color="neutral"
+        class="mb-4 w-fit m-2"
+        label="Show Academia"
+        v-model="showAcademia"
+      />
+      <UCheckbox
+        color="neutral"
+        class="mb-4 w-fit m-2"
+        label="Show Government"
+        v-model="showGovernment"
+      />
+      <UCheckbox
+        color="neutral"
+        class="mb-4 w-fit m-2"
+        label="Show Industry"
+        v-model="showIndustry"
+      />
+    </UCard>
   </div>
 </template>
-
 
 <style>
 .middletext {
@@ -70,9 +105,10 @@ function onClick(partner: Partner) {
   font-Size: 25px;
   margin-left: 10px;
 }
-.imageadjust {
-  position: absolute;
-  text-align: center;
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column
 }
 </style>
 
