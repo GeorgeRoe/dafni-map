@@ -20,6 +20,9 @@ const filteredPartnerPoints = computed(() => {
 })
 
 const slideoverOpen = ref(false)
+function closeSlideover() {
+  slideoverOpen.value = false
+}
 const activePartner = ref<Partner | null>(null)
 function onClick(partner: Partner) {
   activePartner.value = partner
@@ -45,10 +48,10 @@ function onClick(partner: Partner) {
           variant="subtle"
           class="mb-4 w-fit m-2"
           icon="i-lucide-arrow-left"
-          @click="slideoverOpen = false"
-          />
-          <h1 class="toptext">{{ activePartner?.name }}</h1>
-        </template>
+          @click="closeSlideover"
+        />
+        <h1 class="toptext">{{ activePartner?.name }}</h1>
+      </template>
         
       <template  #body>
         <div class="container">
