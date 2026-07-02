@@ -8,5 +8,10 @@
         "name": "Urban Air",
         "description": "The goal of UrbanAIR is to develop a new digital twin that supports decision-makers in urban areas to deal with urban design dilemmas in atmospheric heat and air quality to maximise the health and socio-economic well-being of its citizens affected by climate change. ",
         "imageFilePath": "urbanair.png"
+},
+    {
+        "name": "CrossEU",
+        "description": "The project aims to establish scientific and technical foundations for assessing climate-related socio-economic risks across Europe. During the initial phase, it mapped the state of the art in relevant modelling and governance approaches, defined sectoral and regional case studies, and initiated the development of key modelling tools and data infrastructures that will feed into the CrossEU Decision Support System (DSS). ",
+        "imageFilePath": "crosseu.png"
 }
 ]
