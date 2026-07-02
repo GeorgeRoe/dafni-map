@@ -18,8 +18,8 @@ const filteredPartnerPoints = computed(() => {
     return false
   })
 })
-
 const slideoverOpen = ref(false)
+var links = "place"
 function closeSlideover() {
   slideoverOpen.value = false
 }
@@ -56,8 +56,9 @@ function onClick(partner: Partner) {
       <template  #body>
         <div class="container">
           <img class="imageadjust" :src="'/partner_images/' + activePartner?.imageFilePath "/> 
-          <a href="https://example.com" target="_blank"class="relative text-3xl ml-8 mr-8 mb-8"> Project: {{ activePartner?.project }}</a>
-          <h3 class="relative text-2xl ml-8">Description: {{ activePartner?.organisationDescription }}</h3>
+          <h2 class="relative text-4xl ml-8 mb-4">Description: {{ activePartner?.project }}</h2>
+          <p class="relative text-2xl ml-8">Description: {{ activePartner?.organisationDescription }}</p>
+          <UButton class="class=relative text-2xl ml-3" icon="i-lucide-link" variant="link" :to="`/${activePartner?.project}`"> visit {{activePartner?.project}} page</UButton>
         </div>
       </template>
     </USlideover>
