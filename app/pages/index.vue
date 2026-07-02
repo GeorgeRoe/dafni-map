@@ -50,14 +50,14 @@ function onClick(partner: Partner) {
           icon="i-lucide-arrow-left"
           @click="closeSlideover"
         />
-        <h1 class="toptext">{{ activePartner?.name }}</h1>
+        <h1 class="relative text-5xl ml-8">{{ activePartner?.name }}</h1>
       </template>
         
       <template  #body>
         <div class="container">
           <img class="imageadjust" :src="'/partner_images/' + activePartner?.imageFilePath "/> 
-          <a href="/${activePartner.project" target="_blank"class="middletext"> Project: {{ activePartner?.project }}</a>
-          <h3 class="bottomtext">Description: {{ activePartner?.organisationDescription }}</h3>
+          <a href="https://example.com" target="_blank"class="relative text-3xl ml-8 mr-8 mb-8"> Project: {{ activePartner?.project }}</a>
+          <h3 class="relative text-2xl ml-8">Description: {{ activePartner?.organisationDescription }}</h3>
         </div>
       </template>
     </USlideover>
@@ -91,23 +91,6 @@ function onClick(partner: Partner) {
 </template>
 
 <style>
-.middletext {
-  position: relative;
-
-  font-Size: 35px;
-  margin-left: 10px;
-}
-.toptext {
-  position: relative;
-  font-Size: 45px;
-  margin-left: 10px;
-}
-.bottomtext {
-  position: relative;
-
-  font-Size: 25px;
-  margin-left: 10px;
-}
 .container {
   display: flex;
   justify-content: center;
