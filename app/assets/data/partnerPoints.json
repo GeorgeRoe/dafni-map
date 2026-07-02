@@ -5,8 +5,6 @@
   "stakeholderType": "Industry",
   "latitude": 52.50901,
   "longitude": -2.08560,
-  "imageFilePath": "BFWN.png",
-  "project": "OpenLAND",
   "organisationDescription": "a farmer-led group collaborating to create a landscape-scale habitat network across the 400 square miles of the Norfolk & Suffolk Brecks. This is a very important area for food production but also home to a huge range of species, many of which are found nowhere else in the UK. "
   },
   {
@@ -14,8 +12,6 @@
     "stakeholderType": "Government",
     "latitude": 51.49895,
     "longitude": -0.12691,
-    "project": "OpenLAND",
-    "imageFilePath": "CCC.png",
     "organisationDescription":"The Climate Change Committee was established under the Climate Change Act 2008 and advises the UK and devolved governments on reducing emissions and adapting to the impacts of climate change."
   },
   {
@@ -23,8 +19,6 @@
     "stakeholderType": "Industry",
     "latitude": 52.59651,
     "longitude": 1.36786,
-    "project": "OpenLAND",
-    "imageFilePath": "CPE.png",
     "organisationDescription": "Crown Point Estate comprises a patchwork of nearly 8 square miles of farmland on the edge of Norwich beyond Trowse.  Owned and run by the Colman family since 1872, the estate is also home to Whitlingham Country Park, one of the city's best-loved nature and leisure spots. "
   },
   {
@@ -32,8 +26,6 @@
     "stakeholderType": "Government",
     "latitude": 52.56720,
     "longitude": -0.24077,
-    "project": "OpenLAND",
-    "imageFilePath": "JNCC.png",
     "organisationDescription":"We are the Joint Nature Conservation Committee (JNCC), the only statutory nature advisor to all four countries of the UK. We provide robust scientific evidence and advice to help decision makers turn science into action for nature to guide the UK on a sustainable path. We work across land and sea with partners throughout the UK, the UK Overseas Territories, the Crown Dependencies and around the world."
   },
   {
@@ -41,8 +33,6 @@
     "stakeholderType": "Government",
     "latitude": 53.96054,
     "longitude": -1.07485,
-    "project": "OpenLAND",
-    "imageFilePath": "NE.png",
     "organisationDescription":"We were established by an Act of Parliament in 2006. Our purpose is to help conserve, enhance and manage the natural environment for the benefit of present and future generations, thereby contributing to sustainable development."
   },
   {
@@ -50,8 +40,6 @@
     "stakeholderType": "Government",
     "latitude": 57.46583,
     "longitude": -4.27200,
-    "project": "OpenLAND",
-    "imageFilePath": "NS.png",
     "organisationDescription":"We are Scotland's nature agency. We work to improve our natural environment in Scotland and inspire everyone to care more about it. So that all nature in Scotland - our biodiversity, geodiversity and the natural elements of our landscapes and seascapes - is maintained, enhanced and brings us benefits."
   },
  
@@ -60,8 +48,6 @@
     "stakeholderType": "Industry",
     "latitude": 50.54695,
     "longitude": -4.31485,
-    "project": "OpenLAND",
-    "imageFilePath": "WRT.png",
     "organisationDescription":"What we do is underpinned by science, evidence and experience and a commitment to the resilience of the region’s freshwater resources. Whether we are working with farming or fishing communities, improving river habitats, mapping landscapes or monitoring streams, it is all to bring our rivers to life and keep them healthy for wildlife and people, both now and in the future."
   },
   {
@@ -69,8 +55,6 @@
     "stakeholderType": "Academia",
     "latitude": 52.62106,
     "longitude": 1.23562,
-    "project": "OpenLAND",
-    "imageFilePath": "UEA.png",
     "organisationDescription":"Our stunning and vibrant Norwich campus is home to a global community pursuing personal and professional success. At UEA we come together from different fields to learn, innovate, collaborate and help create a better future."
   },
   {
@@ -78,8 +62,6 @@
     "stakeholderType": "Government",
     "latitude": 52.40632,
     "longitude": 0.75224,
-    "project": "OpenLAND",
-    "imageFilePath": "BTO.png",
     "organisationDescription":"We are a Registered Charity, working to secure the future for birds and nature, using our science, monitoring and data to inform good environmental decisions, inspiring others with the wonder of birds and empowering them to work with us. Our priority is to make a positive impact for birds and people, using our strong and objective science in partnership with others. We strive to work sustainably and to welcome everyone."
   },
  {
@@ -87,8 +69,6 @@
     "stakeholderType": "Academia",
     "latitude": 50.374121,
     "longitude": -4.138512,
-    "project": "OpenLAND",
-    "imageFilePath": "UP.png",
     "organisationDescription":"The University of Plymouth takes a solutions-oriented, systems-thinking approach to solving complex global challenges, addressing critical issues through the lenses of environment, society, economy and place to create strong, sustainable research impact beyond academia. Aligning globally to the UN Sustainable Development Goals, our work aims to drive sustainability both on land and in the marine environment, improve human health and care, and support communities. Our research also drives innovation on our doorstep,and we contribute to the economic growth and development of the South West region."
   },
   {
@@ -96,8 +76,6 @@
     "stakeholderType": "Academia",
     "latitude": 53.804330116,
     "longitude": -1.550997796,
-    "project": "OpenLAND",
-    "imageFilePath": "UL.png",
     "organisationDescription": "Established in 1904, the University of Leeds is one of the largest universities in the UK. We're part of the Russell Group of research-intensive universities and are renowned globally for the quality of our research"
   },
   {
@@ -105,8 +83,6 @@
     "stakeholderType": "Government",
     "latitude": 54.00947,
     "longitude": -2.78739,
-    "project": "OpenLAND",
-    "imageFilePath": "UKCEH.png",
     "organisationDescription": "For over 60 years, UKCEH and its predecessor institutes have been at the forefront of environmental monitoring and modelling. The long-term environmental data hosted by UKCEH inform policymaking, enable new discoveries, and drive research and innovation."
   },
   {
@@ -114,8 +90,6 @@
     "stakeholderType": "Government",
     "latitude": 51.58145,
     "longitude": -1.31189,
-    "project": "OpenLAND",
-    "imageFilePath": "UKRI-STFC.png",
     "organisationDescription": "STFC's mission is to deliver world-leading national and international research and innovation capabilities and, through those, discover the secrets of the Universe."
   },
   {
@@ -123,8 +97,6 @@
     "stakeholderType": "Government",
     "latitude": 52.11603,
     "longitude": -0.26590,
-    "project": "OpenLAND",
-    "imageFilePath": "RSPB.png",
     "organisationDescription": "carry out conservation on a large scale, protect and restore habitats, and save species from extinction."
   },
   {
@@ -132,8 +104,6 @@
     "stakeholderType": "Government",
     "latitude": 52.61991,
     "longitude": 1.21792,
-    "project": "OpenLAND",
-    "imageFilePath": "QIB.png",
     "organisationDescription": "research how food and microbes interact, to promote health and prevent disease."
   },
   {
@@ -141,61 +111,6 @@
     "stakeholderType": "Academia",
     "latitude": 52.625,
     "longitude":  1.22498,
-    "project": "OpenLAND",
-    "imageFilePath": "UNT.png",
     "organisationDescription": "a world-leading university, advancing knowledge, providing creative solutions, and addressing global problems."
-  },
-  {
-    "name": "ARUP",
-    "stakeholderType": "Industry",
-    "latitude": 51.89755,
-    "longitude": -8.46357,
-    "project": "Urban Air",
-    "imageFilePath": "ARUP.png",
-    "organisationDescription": "Since our foundation in 1946, Arup has grown to be one of the largest consultancy firms in Ireland working across every aspect of today's built environment. We are an independent firm with over 700 designers, planners, engineers, project managers, consultants and technical specialists across our four offices."
-  },
-  {
-  "name": "Earlham Institute",
-    "stakeholderType": "Academia",
-    "latitude": 52.62176,
-    "longitude": 1.21904,
-    "project": "OpenLAND",
-    "imageFilePath": "EI.png",
-    "organisationDescription": "We harness the power of data-driven biology to accelerate solutions for health, biodiversity, and food security."
-  },
-  {
-    "name": "KNMI",
-    "stakeholderType": "Industry",
-    "latitude": 52.08287,
-    "longitude": 4.32642,
-    "project": "Urban Air",
-    "imageFilePath": "KNMI.png",
-    "organisationDescription": "The climate is changing, the weather is becoming more erratic, the soil is shaking. Keeping the Netherlands safe and liveable is becoming increasingly challenging. The KNMI provides society with independent knowledge, advice and warnings about risks in the field of weather, climate and seismology, day and night."
-  },
-  { "name": "Leibniz University Hannover",
-    "stakeholderType": "Academia",
-    "latitude": 52.38254,
-    "longitude": 9.71785,
-    "project": "Urban Air",
-    "imageFilePath": "LUH.png",
-    "organisationDescription": "ounded in 1831 by the scholar Karl Karmarsch, the Higher Trade School of Hannover started out with just 64 students. Today Leibniz University Hannover is home to roughly 26,000 students in the natural sciences and engineering, the humanities and social sciences, and law and economics. The university is committed to continuously improving its teaching and research to ensure its ongoing appeal as a place to study, teach and conduct research."
-  },
-  {
-    "name": "BSC-CNS",
-    "stakeholderType": "Industry",
-    "latitude": 41.38976,
-    "longitude": 2.11554,
-    "project": "Urban Air",
-    "imageFilePath": "BSC.png",
-    "organisationDescription": "The Barcelona Supercomputing Center (BSC-CNS) is the national supercomputing center in Spain. We specialise in high-performance computing (HPC) and manage MareNostrum, one of the most powerful supercomputers in Europe."
-  },
-  {
-    "name": "VITO",
-    "stakeholderType": "Industry",
-    "latitude": 51.21869,
-    "longitude":  5.09091,
-    "project": "Urban Air",
-    "imageFilePath": "VITO.png",
-    "organisationDescription": "As a top European research centre, VITO and its 1,300 employees turn scientific insights into ground-breaking technological innovations, AI solutions and policy advice. We do so with a single objective: to help our world thrive for at least 1,000 more years."
   }
 ]
