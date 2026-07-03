@@ -39,7 +39,7 @@ const map = shallowRef<maplibregl.Map | null>(null)
 
 // Get base URL to ensure image paths are correct when deployed to GH Pages
 const config = useRuntimeConfig()
-const baseUrl = config.app.baseURL || ''
+const baseUrl = config.app.baseURL || '/'
 
 onMounted(() => {
   // Wait until the component has been rendered

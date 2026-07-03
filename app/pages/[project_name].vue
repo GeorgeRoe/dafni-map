@@ -17,6 +17,9 @@ const filteredPartnerPoints = computed(() => {
     return false
   })
 })
+
+const config = useRuntimeConfig()
+const baseUrl = config.app.baseURL || '/'
 </script>
 
 
@@ -58,7 +61,7 @@ const filteredPartnerPoints = computed(() => {
         v-for="(partner,index) in filteredPartnerPoints"
         :key="index"
         :title="partner.name"
-        :image="'/partner_images/' + partner.imageFilePath"
+        :image="`${baseUrl}partner_images/${partner.imageFilePath}`"
         :description="partner.organisationDescription"
       />
     </UBlogPosts>
