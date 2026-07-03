@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: "24"
       - run: npm install
-      - run: npm run build
+      - run: npm run generate
         env:
           NUXT_APP_BASE_URL: '/dafni-map/'
       - name: Upload artifact
