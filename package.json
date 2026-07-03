@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
@@ -27,6 +28,5 @@
     "ts-patch": "^4.0.1",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.0"
-  },
-  "packageManager": "pnpm@11.1.3"
+  }
 }
