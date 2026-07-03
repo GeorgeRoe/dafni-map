@@ -9,15 +9,31 @@ const partnerPoints = useValidatedPoints(partnerPointData)
 const showAcademia = ref(true)
 const showIndustry = ref(true)
 const showGovernment = ref(true)
+const showCrossEU = ref(true)
+const showOpenLand = ref(true)
+const showUrbanAir = ref(true)
 
 const filteredPartnerPoints = computed(() => {
   return partnerPoints.value.filter(point => {
-    if (point.stakeholderType === StakeholderType.Government && showGovernment.value) return true
-    if (point.stakeholderType === StakeholderType.Academia && showAcademia.value) return true
-    if (point.stakeholderType === StakeholderType.Industry && showIndustry.value) return true
+    if (point.stakeholderType === StakeholderType.Government && showGovernment.value) {
+      if (point.project === "Urban Air" && showUrbanAir.value)return true
+      if (point.project === "OpenLAND" && showOpenLand.value)return true
+      if (point.project === "CrossEU" && showCrossEU.value)return true}
+
+    if (point.stakeholderType === StakeholderType.Academia && showAcademia.value) {
+    if (point.project === "Urban Air" && showUrbanAir.value)return true
+      if (point.project === "OpenLAND" && showOpenLand.value)return true
+      if (point.project === "CrossEU" && showCrossEU.value)return true}
+
+    if (point.stakeholderType === StakeholderType.Industry && showIndustry.value) {
+      if (point.project === "Urban Air" && showUrbanAir.value)return true
+      if (point.project === "OpenLAND" && showOpenLand.value)return true
+      if (point.project === "CrossEU" && showCrossEU.value)return true}
     return false
   })
 })
+
+
 const slideoverOpen = ref(false)
 var links = "place"
 function closeSlideover() {
@@ -94,6 +110,24 @@ function onClick(partner: Partner) {
         label="Show Industry"
         v-model="showIndustry"
       />
+      <UCheckbox
+        color="neutral"
+        class="mb-4 w-fit m-2 mt-10"
+        label="Show CrossEU"
+        v-model="showCrossEU"
+      />
+      <UCheckbox
+        color="neutral"
+        class="mb-4 w-fit m-2"
+        label="Show OpenLand"
+        v-model="showOpenLand"
+      />
+      <UCheckbox
+        color="neutral"
+        class="mb-4 w-fit m-2"
+        label="Show Urban Air"
+        v-model="showUrbanAir"
+        />
     </UCard>
   </div>
 </template>
