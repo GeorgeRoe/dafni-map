@@ -55,7 +55,7 @@ function onClick(partner: Partner) {
         
       <template  #body>
         <div v-if="activePartner" class="container">
-          <img class="imageadjust" :src="'/partner_images/' + activePartner.imageFilePath "/> 
+          <Image class="imageadjust" :src="'partner_images/' + activePartner.imageFilePath" /> 
           <h2 class="relative text-4xl ml-8 mb-4">Project: {{ activePartner.project }}</h2>
           <p class="relative text-2xl ml-8">Description: {{ activePartner.organisationDescription }}</p>
           <UButton

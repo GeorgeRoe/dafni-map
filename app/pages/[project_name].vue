@@ -35,8 +35,8 @@ const filteredPartnerPoints = computed(() => {
         </div>
 
         <div class="flex justify-center">
-          <img
-            :src="`/project_images/${selectedProject.imageFilePath}`"
+          <Image
+            :src="`project_images/${selectedProject.imageFilePath}`"
             :alt="selectedProject.name"
             class="w-auto object-contain"
           />

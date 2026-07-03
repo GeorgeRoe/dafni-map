@@ -37,6 +37,10 @@ const mapElement = useTemplateRef<HTMLElement>('map')
 // Stores the MapLibre map instance after it is created
 const map = shallowRef<maplibregl.Map | null>(null)
 
+// Get base URL to ensure image paths are correct when deployed to GH Pages
+const config = useRuntimeConfig()
+const baseUrl = config.app.baseURL || ''
+
 onMounted(() => {
   // Wait until the component has been rendered
   // MapLibre needs the map <div> to exist before creating the map
@@ -82,7 +86,7 @@ onMounted(() => {
         if (!map.value) return
         
         try {
-          const image = await map.value.loadImage(`/icons/${stakeholderType}.png`)
+          const image = await map.value.loadImage(`${baseUrl}icons/${stakeholderType}.png`)
           map.value.addImage(stakeholderType, image.data)
         } catch (error) {
           console.error(`Failed to load icon for: ${stakeholderType}`, error)
