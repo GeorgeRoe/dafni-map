@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import projectData from '~/assets/data/project.json'
-import partnerPointData from '~/pages/index.vue'
+import partnerPointData from '~/assets/data/partnerPoints.json'
 import { useValidatedPoints } from '~/composables/useValidatedPoints'
 
 const route = useRoute()
@@ -21,11 +21,6 @@ const filteredPartnerPoints = computed(() => {
 
 
 <template>
-    <ul>
-      <li v-for="partner in filteredPartnerPoints">
-          {{ partner }}
-      </li>
-    </ul>
   <UContainer class="py-10">
     <UCard v-if="selectedProject" class="overflow-hidden">
       <div class="grid gap-4 md:grid-cols-2 items-center">
@@ -56,5 +51,16 @@ const filteredPartnerPoints = computed(() => {
       title="Project not found"
       description="The requested project could not be found."
     />
+
+    <h1 class="relative font-bold text-3xl mt-16 mb-4">Partners</h1>
+    <UBlogPosts>
+      <UBlogPost
+        v-for="(partner,index) in filteredPartnerPoints"
+        :key="index"
+        :title="partner.name"
+        :image="'/partner_images/' + partner.imageFilePath"
+        :description="partner.organisationDescription"
+      />
+    </UBlogPosts>
   </UContainer>
 </template>

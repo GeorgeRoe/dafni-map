@@ -54,11 +54,18 @@ function onClick(partner: Partner) {
       </template>
         
       <template  #body>
-        <div class="container">
-          <img class="imageadjust" :src="'/partner_images/' + activePartner?.imageFilePath "/> 
-          <h2 class="relative text-4xl ml-8 mb-4">Description: {{ activePartner?.project }}</h2>
-          <p class="relative text-2xl ml-8">Description: {{ activePartner?.organisationDescription }}</p>
-          <UButton class="class=relative text-2xl ml-3" icon="i-lucide-link" variant="link" :to="`/${activePartner?.project}`"> visit {{activePartner?.project}} page</UButton>
+        <div v-if="activePartner" class="container">
+          <img class="imageadjust" :src="'/partner_images/' + activePartner.imageFilePath "/> 
+          <h2 class="relative text-4xl ml-8 mb-4">Project: {{ activePartner.project }}</h2>
+          <p class="relative text-2xl ml-8">Description: {{ activePartner.organisationDescription }}</p>
+          <UButton
+            class="class=relative text-2xl ml-3"
+            icon="i-lucide-link"
+            variant="link"
+            :to="`/${activePartner.project}`"
+          >
+            visit {{activePartner.project}} page
+          </UButton>
         </div>
       </template>
     </USlideover>
