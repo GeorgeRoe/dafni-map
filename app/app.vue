@@ -49,5 +49,7 @@ useSeoMeta({
     <UMain>
       <NuxtPage />
     </UMain>
+
+    <WelcomeModal />
   </UApp>
 </template>
